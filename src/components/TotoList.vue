@@ -12,15 +12,15 @@
         </div>
         <br/>
         <ol>
-               <li v-for="item of list"  :key="item"> 
-                <input type="checkbox">
-              {{item}}      
+               <li v-for="(item,index)  of list"  :key="index"> 
+                <input type="checkbox" v-model="$store.state.buttons[index-1]">
+                 {{item}}      
                 </li>
         </ol>
         <div>
             <ul id="filters">
                 <li>
-                    <a href="#" data-filter="all">ALL</a>
+                    <a href="#" data-filter="all" @click="AllItems">ALL</a>
                 </li>
                 <li>
                     <a href="#" data-filter="active">Active</a>
@@ -46,6 +46,9 @@ export default {
     changeInput: function() {
       this.list.push(this.inputValue);
       this.inputValue = "";
+    },
+    AllItems:function(){
+      alert('eee');
     }
   }
 };
