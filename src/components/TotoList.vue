@@ -13,7 +13,7 @@
         <br/>
         <ol>
                <li v-for="item of list"  :key="item"> 
-                
+                <input type="checkbox">
               {{item}}      
                 </li>
         </ol>
@@ -35,10 +35,7 @@
 
 <script>
 export default {
-  name: "Counter",
-  // props: {
-  //   n: Number
-  // },
+  name: "TotoList",
   data: function() {
     return {
       inputValue: "",

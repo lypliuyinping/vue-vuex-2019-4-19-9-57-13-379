@@ -1,16 +1,16 @@
 <template>
   <div id="app"> 
-    <Counter />
+    <TotoList />
   </div>
 </template>
 
 <script>
-import Counter from "./components/Counter";
+import TotoList from "./components/TotoList";
 
 export default {
   name: "app",
   components: {
-    Counter
+    TotoList
   },
   data: function() {
     return {

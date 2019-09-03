@@ -15,8 +15,12 @@
         <ol>
             <li v-for="index in getMessagesNum()" v-bind:key="index" 
             :class="{'checked': $store.getters.getButtonsByIndex(index)===true}">
-                <label><input name="done-todo" type="checkbox" class="done-todo" v-model="$store.state.buttons[index-1]"></label>
-                <span contenteditable="true" class="done-todo">{{$store.getters.getMessagesByIndex(index)}}</span>
+            
+                <label><input name="done-todo" type="checkbox" class="done-todo"
+                 v-model="$store.state.buttons[index-1]"></label>
+
+                <span contenteditable="true" class="done-todo">
+                  {{$store.getters.getMessagesByIndex(index)}}</span>
             </li>
         </ol>
 
